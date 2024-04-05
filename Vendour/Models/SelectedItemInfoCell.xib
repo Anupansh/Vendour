@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SelectedItemInfoCell" id="NCp-SJ-mbj" customClass="SelectedItemInfoCell" customModule="Vendour" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="120" height="150"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="120" height="150"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UBt-w4-Nko">
+                        <rect key="frame" x="0.0" y="8" width="120" height="134"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rti-Nc-ILH">
+                                <rect key="frame" x="40" y="8" width="40" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Oqd-bg-yWe"/>
+                                    <constraint firstAttribute="width" constant="40" id="nT2-C8-ls5"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H1a-Vy-M82">
+                                <rect key="frame" x="42.5" y="80" width="35.5" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="tzZ-RX-uCO">
+                                <rect key="frame" x="29" y="105" width="62" height="20"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3d3-jA-CkZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="3d3-jA-CkZ" secondAttribute="height" multiplier="1:1" id="IEx-SK-kDZ"/>
+                                        </constraints>
+                                        <state key="normal" image="decrease icon"/>
+                                        <connections>
+                                            <action selector="minusBtnPressed:" destination="NCp-SJ-mbj" eventType="touchUpInside" id="XN2-7a-pdi"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A30-5D-hIY">
+                                        <rect key="frame" x="21" y="0.0" width="20" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGL-YD-YZa">
+                                        <rect key="frame" x="42" y="0.0" width="20" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="eGL-YD-YZa" secondAttribute="height" multiplier="1:1" id="1bH-XX-H6w"/>
+                                        </constraints>
+                                        <state key="normal" image="increase icon"/>
+                                        <connections>
+                                            <action selector="plusBtnPressed:" destination="NCp-SJ-mbj" eventType="touchUpInside" id="v6C-6k-yYT"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="7S2-7y-R6r"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="tzZ-RX-uCO" firstAttribute="centerX" secondItem="UBt-w4-Nko" secondAttribute="centerX" id="4X9-7d-K65"/>
+                            <constraint firstItem="rti-Nc-ILH" firstAttribute="top" secondItem="UBt-w4-Nko" secondAttribute="top" constant="8" id="K4E-Xq-yfE"/>
+                            <constraint firstItem="H1a-Vy-M82" firstAttribute="centerX" secondItem="UBt-w4-Nko" secondAttribute="centerX" id="TB2-zS-pAG"/>
+                            <constraint firstItem="H1a-Vy-M82" firstAttribute="top" secondItem="rti-Nc-ILH" secondAttribute="bottom" constant="12" id="acm-A1-mTN"/>
+                            <constraint firstItem="tzZ-RX-uCO" firstAttribute="top" secondItem="H1a-Vy-M82" secondAttribute="bottom" constant="8" id="xMD-6e-z53"/>
+                            <constraint firstItem="rti-Nc-ILH" firstAttribute="centerX" secondItem="UBt-w4-Nko" secondAttribute="centerX" id="yvY-8o-QxG"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="UBt-w4-Nko" firstAttribute="top" secondItem="NCp-SJ-mbj" secondAttribute="top" constant="8" id="aZ4-wp-F0C"/>
+                <constraint firstItem="UBt-w4-Nko" firstAttribute="leading" secondItem="NCp-SJ-mbj" secondAttribute="leading" id="lNO-lX-YPy"/>
+                <constraint firstAttribute="bottom" secondItem="UBt-w4-Nko" secondAttribute="bottom" constant="8" id="oJX-v8-zpM"/>
+                <constraint firstAttribute="trailing" secondItem="UBt-w4-Nko" secondAttribute="trailing" id="qEh-v9-gxU"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Zuo-zV-rVH"/>
+            <size key="customSize" width="350" height="102"/>
+            <connections>
+                <outlet property="backView" destination="UBt-w4-Nko" id="kdq-Wm-lMt"/>
+                <outlet property="itemImage" destination="rti-Nc-ILH" id="1fu-WL-7VG"/>
+                <outlet property="numberOfItemsLabel" destination="A30-5D-hIY" id="D6c-Nl-BfQ"/>
+                <outlet property="quantityLabel" destination="H1a-Vy-M82" id="hsL-PS-M2V"/>
+            </connections>
+            <point key="canvasLocation" x="59" y="59"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="decrease icon" width="250" height="250"/>
+        <image name="increase icon" width="250" height="250"/>
+    </resources>
+</document>
